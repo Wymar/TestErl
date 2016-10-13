@@ -4,6 +4,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 import javafx.stage.Stage;
+//Global variables
+private String uselr;
+private String password ;
+
 
 public class Main extends Application
 {
@@ -20,8 +24,10 @@ public class Main extends Application
     public static void main(String[] args)
     {
         launch(args);
-        //TODO: INITIALISE HERE!!
+        //TODO: INITIApLISE HERE!!
     }
+
+
 
     //TODO: CREATE EVENT-HANDLERS FOR MAIN-VIEW
 }
