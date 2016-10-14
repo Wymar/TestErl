@@ -4,30 +4,32 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 import javafx.stage.Stage;
-//Global variables
-private String uselr;
-private String password ;
-
 
 public class Main extends Application
 {
-
-    @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("view.fxml"));
-        primaryStage.setTitle("TestErl");
-        primaryStage.setScene(new Scene(root, 300, 275));
-        primaryStage.show();
-    }
+    private Controller Ebase;
 
 
     public static void main(String[] args)
     {
         launch(args);
-        //TODO: INITIApLISE HERE!!
     }
 
 
+    @Override
+    public void start(Stage shell) throws Exception{
+        //TODO: initialise here
+        Ebase = new Controller();
+        Ebase.loadBEAM();
 
-    //TODO: CREATE EVENT-HANDLERS FOR MAIN-VIEW
+        //INTERFACE STUFF
+        Parent root = FXMLLoader.load(getClass().getResource("view.fxml"));
+        shell.setTitle("TestErl");
+        shell.setScene(new Scene(root, 300, 275));
+        shell.show();
+    }
+
+
+    //TODO: Event-Handlers go here
+
 }
